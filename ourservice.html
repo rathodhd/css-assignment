@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 60vh;
+            width: 100%;
+            display: flex;
+        }
+
+        .first {
+            height: 100%;
+            width: 50%;
+            position: relative;
+            background-color: darkslategrey;
+
+        }
+
+        .first::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            border: 1px solid #ee6767;
+            height: 20px;
+        }
+
+        .first h2 {
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            font-size: 22px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .first1 h4 {
+            text-transform: uppercase;
+            color: rgb(229, 72, 72);
+            position: absolute;
+            top: 80px;
+            right: 60px;
+        }
+
+        .first1 p {
+
+            color: #fff;
+            position: absolute;
+            top: 100px;
+            right: 0px;
+            left: 120px;
+            font-size: 14px;
+        }
+
+        .first2 h4 {
+            text-transform: uppercase;
+            color: rgb(229, 72, 72);
+            position: absolute;
+            top: 140px;
+            right: 60px;
+        }
+
+        .first2 p {
+
+            color: #fff;
+            position: absolute;
+            top: 160px;
+            right: 0px;
+            left: 120px;
+            font-size: 14px;
+        }
+
+        .first3 h4 {
+            text-transform: uppercase;
+            color: rgb(229, 72, 72);
+            position: absolute;
+            top: 210px;
+            right: 60px;
+        }
+
+        .first3 p {
+
+            color: #fff;
+            position: absolute;
+            top: 230px;
+            right: 0px;
+            left: 120px;
+            font-size: 14px;
+        }
+
+        .two {
+            height: 100%;
+            width: 50%;
+            float: right;
+        }
+
+        .two img {
+            height: 60vh;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .laptop i {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 85px;
+            left: 635px;
+            border: 0px solid #fff;
+            border-radius: 50%;
+            padding: 15px;
+            color: bisque;
+            background-color: white;
+        }
+
+        .print i {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 145px;
+            left: 635px;
+            color: white;
+            border: 0px solid #fff;
+            border-radius: 50%;
+            padding: 15px;
+            color: bisque;
+            background-color: white;
+        }
+
+        .camera i {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 205px;
+            left: 635px;
+            color: white;
+            border: 0px solid #fff;
+            border-radius: 50%;
+            padding: 15px;
+            color: bisque;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+
+            <h2>our services</h2>
+
+            <div class="first1">
+                <div class="laptop">
+                    <i class="fa fa-laptop"></i>
+                </div>
+                <div class="print">
+                    <i class="fa fa-fax"></i>
+                </div>
+                <div class="camera">
+                    <i class="fa fa-camera"></i>
+
+                </div>
+
+                <h4>web design</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, facere soluta omnis, nulla tempore
+                    illo
+                    provident reprehenderit!</p>
+            </div>
+            <div class="first2">
+                <h4>print design</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, facere soluta omnis, nulla tempore
+                    illo
+                    provident reprehenderit!</p>
+            </div>
+            <div class="first3">
+                <h4>photography</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, facere soluta omnis, nulla tempore
+                    illo
+                    provident reprehenderit!</p>
+            </div>
+        </div>
+        <div class="two"><img src="/cel.jpg"></div>
+    </div>
+
+</body>
+
+</html>

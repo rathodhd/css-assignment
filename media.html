@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+
+        }
+
+        .menu 
+        {
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 50px;
+
+        }
+
+        .leftmenu 
+        {
+            height: 50px;
+            width: 20%;
+            background-color: black;
+            color: #fff;
+        }
+
+        .rightmenu {
+            height: 50px;
+            width: 80%;
+            background-color: red;
+            color: #fff;
+            float: right;
+        }
+
+        .hero {
+            height: 300px;
+            width: 100%;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            height: 200px;
+            width: 100%;
+            position: relative;
+        }
+
+        .one {
+            height: 200px;
+            width: 50%;
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two {
+            height: 100px;
+            width: 30%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: cyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .three {
+            height: 100px;
+            width: 30%;
+            position: absolute;
+            right: 0;
+            top: 100px;
+            background-color: darkkhaki;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            height: 100px;
+            width: 100%;
+            background-color: violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        @media only screen and (min-width:200px) and (max-width:567px)
+        {
+            body {
+                height: 100vh;
+            }
+
+            .menu {
+
+                height: 70px;
+                display: inline;
+                /* display: flex; */
+                justify-content: center;
+                text-align: center;
+                line-height: 70px;
+            }
+
+
+            .leftmenu {
+
+                height: 70px;
+                width: 100%;
+                background-color: black;
+                color: #fff;
+            }
+
+            .rightmenu {
+                height: 70px;
+                width: 100%;
+                background-color: red;
+                color: #fff;
+
+            }
+
+            .hero {
+                height: 150px;
+                width: 100%;
+                background-color: blueviolet;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .main {
+                height: 100px;
+                width: 100%;
+                position: relative;
+                display: flex;
+            }
+
+            .one {
+                height: 100px;
+                width: 100%;
+                background-color: coral;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .two {
+                height: 100px;
+                width: 100%;
+                position: absolute;
+                /* right: 0; */
+                top: 253px;
+                background-color: cyan;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .three {
+                height: 75px;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: 178px;
+                background-color: darkkhaki;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .banner {
+                height: 80px;
+                width: 100%;
+                background-color: violet;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 80px;
+            }
+
+
+        }
+        @media only screen and (min-width:568px) and (max-width:992px)
+        {
+            .menu {
+
+                height: 70px;
+                display: inline;
+                 /* display: flex;*/
+                justify-content: center;
+                text-align: center;
+                line-height: 70px;
+                }
+            
+
+
+
+            .leftmenu {
+
+                height: 70px;
+                width: 100%;
+                background-color: black;
+                color: #fff;
+            }
+            .hero {
+                position: absolute;
+                top: 70px;
+                height: 150px;
+                width: 100%;
+                background-color: blueviolet;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .rightmenu {
+                position: absolute;
+                top: 220px;
+                height: 60%;
+                width: 20%;
+                background-color: red;
+                color: #fff;
+
+            }
+            .one {
+                position: absolute;
+                left: 20%;
+                top: 150px;
+                height: 150px;
+                width: 80%;
+                background-color: coral;
+                /* display: inline-flex; */
+                justify-content: center; 
+                align-items: center;
+            }
+            .banner {
+                position: absolute;
+                top: 370px;
+                left: 20%;
+                height: 80px;
+                width: 80%;
+                background-color: violet;
+                /* display: flex; */
+                justify-content: center;
+                align-items: center;
+                line-height: 80px;
+            }
+            .two {
+                height: 115px;
+                width: 40%;
+                position: absolute;
+                /* right: 0; */
+                top: 370px;
+                left: 20%;
+                background-color: cyan;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .three {
+                height: 115px;
+                width: 40%;
+                position: absolute;
+                right: 0;
+                top: 370px;
+                background-color: darkkhaki;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+       }     
+          
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="leftmenu">HEADER</div>
+        <div class="rightmenu">MENU</div>
+
+    </div>
+    <div class="hero">
+        HERO
+    </div>
+    <div class="main">
+        <div class="one">MAIN</div>
+        <div>
+            <div class="two">IMAGE</div>
+            <div class="three">EXTRA</div>
+        </div>
+
+    </div>
+    <div class="banner">BANNER</div>
+</body>
+
+</html>

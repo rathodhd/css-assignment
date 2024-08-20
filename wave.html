@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(19, 24, 27, 0.9),rgba(20, 24, 27, 0.9)), url('/cel.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-color: #5690ed;
+            
+         }
+         .container::after{
+            content: "";
+            position: absolute;
+            border: 1px solid #fff;
+            background-color: #fff;
+            height: 1px;
+            width: 90px;
+            top: 280px;
+            left: 620px;
+         }
+         .container h1{
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+         }
+         .container h2{
+            position: absolute;
+            top: 550px;
+            left: 400px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 20px;
+        }
+        .container h4{
+            position: absolute;
+            top: 580px;
+            left: 400px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 14px;
+        }
+         .container p{
+            position: absolute;
+            top: 240px;
+            left: 510px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+
+         }
+         
+
+        .wave {
+
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .container img{
+            
+            height: 45px;
+            width: 45px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        #emp1{
+            position: absolute;
+            bottom: 199px;
+            left: 250px;
+            }
+        #emp2{
+            position: absolute;
+            bottom: 190px;
+            left: 450px;
+            }
+         #emp3{
+            position: absolute;
+            bottom: 139px;
+            left: 750px;
+            }
+            #emp4{
+            position: absolute;
+            bottom: 139px;
+            left: 950px;
+            }
+             #emp5{
+            position: absolute;
+            bottom: 179px;
+            left: 1150px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>our team</h1>
+        <p>meet the members of our team</p>
+        <img src="/emp1.jpg" id="emp1">
+            <img src="/emp2" id="emp2">
+            <img src="/emp3" id="emp3">
+            <img src="/emp4" id="emp4">
+            <img src="/emp5" id="emp5">
+            <h2>web designer</h2>
+            <h4>graphic designer</h4>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#5690ed" fill-opacity="0.3"
+                    d="M0,192L60,165.3C120,139,240,85,360,80C480,75,600,117,720,138.7C840,160,960,160,1080,144C1200,128,1320,96,1380,80L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                </path>
+            </svg>
+            
+        </div>
+    </div>
+</body>
+
+</html>

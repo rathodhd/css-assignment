@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+.bgimage{
+    background-image: linear-gradient(rgba(177, 208, 224, 0.8),rgba(177, 208, 224, 0.8)), url('/self2/img1.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    clip-path: polygon(100% 0%,100% 75%,50% 100%,0% 75%,0 0);
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.menu{
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0,0, 0.5);
+}
+.leftmenu{
+    width: 25%;
+    line-height: 80px;
+    float: left;
+    margin: auto
+}
+.leftmenu h4{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 50px;
+    
+    font-size: 22px;
+    
+}
+.rightmenu{
+    width: 75%;
+    
+    float: right;
+}
+.rightmenu ul{
+    margin-left: 100px;
+
+}
+.rightmenu ul li{
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 40px;
+    line-height: 80px;
+    font-size: 18px;
+
+}
+.rightmenu li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.rightmenu li a:hover{
+    color: orange;
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
+    
+    
+}
+
+.main{
+    width: 100%;
+    margin-top: 150px;
+    text-transform: uppercase;
+    text-align: center;
+    color:white;
+
+}
+.main h1{
+    margin: 10px 0px;
+    font-size: 60px;
+    font-weight: bold;
+}
+#buttonone{
+    background-color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 150px;
+    border: 3px solid white;
+    margin-top: 12px;
+}
+#buttontwo{
+    background-color: transparent;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+    width: 150px;
+    border: 3px solid white;
+    margin-top: 12px;
+    margin-left: 5px;
+}

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: auto;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .menu {
+            height: 80px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #check{
+            display: none;
+        }
+        #checkbtn{
+            position: absolute;
+            margin-right: 20px;
+            color: black;
+            top: 30px;
+            right: 20px;
+            color: #fff;
+            font-size: 20px;
+            display: none;
+                       
+        }
+
+        .leftmenu {
+            width: 25%;
+            line-height: 80px;
+            float: left;
+            margin: auto
+        }
+
+        .leftmenu h4 {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            padding-left: 50px;
+
+            font-size: 22px;
+
+        }
+
+        .rightmenu {
+            width: 75%;
+
+            float: right;
+        }
+
+        .rightmenu ul {
+            margin-left: 100px;
+            
+
+        }
+
+        .rightmenu ul li {
+            list-style: none;
+            display: inline-block;
+            text-decoration: none;
+            padding-left: 40px;
+            line-height: 80px;
+            font-size: 18px;
+
+        }
+
+        .rightmenu li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .rightmenu li a:hover {
+            color: orange;
+            border-bottom: 1px solid orange;
+            border-top: 1px solid orange;
+        }
+
+        .main {
+            position: relative;
+
+            width: 100%;
+            margin-top: 50px;
+
+        }
+
+        .main h1 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .main p {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+            padding: 0 40px;
+        }
+
+        button {
+            margin: 30px 0;
+        }
+
+        #mail {
+
+            margin-left: 40%;
+            padding: 10px 30px;
+            background-color: beige;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #try {
+            padding: 10px 40px;
+            background-color: rgb(44, 95, 212);
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .msection {
+
+            height: 550px;
+            width: 100%;
+            position: relative;
+        }
+
+        .left {
+            height: 550px;
+            width: 10%;
+            background-color: black;
+        }
+
+        .colum {
+            position: relative;
+            height: 200px;
+            width: 90%;
+            display: flex;
+
+
+        }
+
+        .colum1 {
+            position: absolute;
+            height: 150px;
+            width: 200px;
+            background-color: rgb(197, 212, 212);
+            left: 400px;
+            font-size: 26px;
+            color: #fff;
+
+        }
+
+        .colum2 {
+            position: absolute;
+            height: 150px;
+            width: 200px;
+            background-color: rgb(197, 212, 212);
+            left: 700px;
+            font-size: 26px;
+            color: #fff;
+        }
+
+        .colum3 {
+            position: absolute;
+            height: 150px;
+            width: 200px;
+            background-color: rgb(197, 212, 212);
+            left: 1000px;
+            font-size: 26px;
+            color: #fff;
+        }
+
+        .section {
+            height: auto;
+            width: 90%;
+            position: absolute;
+            left: 10%;
+        }
+
+        .chart1 {
+            height: 350px;
+            width: 350px;
+            border: 1px solid rgb(203, 209, 212);
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            border-top: none;
+            border-right: none;
+        }
+
+        .chart1 ul li {
+            padding-bottom: 50px;
+            text-decoration: none;
+            list-style-type: none;
+            margin-left: -28px;
+
+        }
+
+        .chart2 {
+            height: 350px;
+            width: 500px;
+            border: 1px solid rgb(203, 209, 212);
+            position: absolute;
+            top: 0px;
+            left: 600px;
+            border-top: none;
+            border-right: none;
+        }
+
+        .chart2 ul li {
+            padding-bottom: 20px;
+            text-decoration: none;
+            list-style-type: none;
+            margin-left: -28px;
+            margin-top: 5px;
+
+        }
+
+        .col1 {
+            position: absolute;
+            height: 80px;
+            width: 30px;
+            border: 1px solid rgb(205, 234, 240);
+            background-color: rgb(205, 234, 240);
+            bottom: 0;
+            left: 50px;
+            border-bottom: none;
+        }
+
+        .col2 {
+            position: absolute;
+            height: 140px;
+            width: 30px;
+            border: 1px solid rgb(205, 234, 240);
+            background-color: rgb(205, 234, 240);
+            bottom: 0;
+            left: 100px;
+            border-bottom: none;
+        }
+
+        .col3 {
+            position: absolute;
+            height: 320px;
+            width: 30px;
+            border: 1px solid rgb(85, 176, 197);
+            background-color: rgb(85, 176, 197);
+            bottom: 0;
+            left: 150px;
+            border-bottom: none;
+        }
+
+        .col4 {
+            position: absolute;
+            height: 160px;
+            width: 30px;
+            border: 1px solid rgb(205, 234, 240);
+            background-color: rgb(205, 234, 240);
+            bottom: 0;
+            left: 200px;
+            border-bottom: none;
+        }
+
+        .col6 {
+            position: absolute;
+            height: 80px;
+            width: 70px;
+            border: 1px solid rgb(205, 234, 240);
+            background-color: rgb(205, 234, 240);
+            bottom: 0;
+            left: 50px;
+            border-bottom: none;
+        }
+
+        .col7 {
+            position: absolute;
+            height: 240px;
+            width: 70px;
+            border: 1px solid rgb(143, 128, 218);
+            background-color: rgb(143, 128, 218);
+            bottom: 0;
+            left: 150px;
+            border-bottom: none;
+        }
+
+        .col8 {
+            position: absolute;
+            height: 140px;
+            width: 70px;
+            border: 1px solid rgb(223, 106, 23);
+            background-color: rgb(223, 106, 23);
+            bottom: 0;
+            left: 250px;
+            border-bottom: none;
+        }
+
+        .col9 {
+            position: absolute;
+            height: 80px;
+            width: 70px;
+            border: 1px solid rgb(178, 142, 25);
+            background-color: rgb(178, 142, 25);
+            bottom: 0;
+            left: 350px;
+            border-bottom: none;
+        }
+
+        .footer {}
+
+        .footer p {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .icon {
+            margin-left: 400px;
+            margin-top: 20px;
+        }
+
+        .icon span {
+            padding-left: 50px;
+            font-size: 22px;
+            display: inline-block;
+
+
+        }
+
+        @media only screen and (min-width:768px) and (max-width:1068px) {
+            .menu {
+                height: 50px;
+            }
+
+            .leftmenu {
+                width: 15%;
+                line-height: 50px;
+
+            }
+
+            .leftmenu h4 {
+                padding-left: 15px;
+                font-size: 18px;
+            }
+
+            .rightmenu {
+                width: 85%;
+
+                float: right;
+            }
+
+            .rightmenu ul {
+                margin-left: 100px;
+
+            }
+
+            .rightmenu ul li {
+                padding-left: 30px;
+                line-height: 50px;
+                font-size: 14px;
+
+            }
+
+
+
+            .main {
+                position: relative;
+                width: 100%;
+
+            }
+
+            .main h1 {
+                position: absolute;
+                left: 200px;
+                font-size: 40px;
+            }
+
+            .main p {
+                font-size: 14px;
+                position: absolute;
+                top: 60px;
+            }
+
+            #mail {
+
+                margin-left: 30%;
+                margin-top: 130px;
+                padding: 10px 30px;
+                font-size: 16px;
+            }
+
+            .colum {
+                position: relative;
+                height: 120px;
+                width: 80%;
+                display: flex;
+            }
+
+            .colum1 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 200px;
+            }
+
+            .colum2 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 350px;
+            }
+
+            .colum3 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 500px;
+            }
+
+            .section {
+                height: auto;
+                width: 80%;
+                position: absolute;
+                left: 10%;
+            }
+
+            .chart1 {
+                height: 250px;
+                width: 200px;
+                position: absolute;
+                top: 100px;
+                left: 50px;
+            }
+
+            .chart1 ul li {
+                padding-bottom: 40px;
+            }
+
+
+            .chart2 {
+                height: 250px;
+                width: 200px;
+                position: absolute;
+                top: 100px;
+                left: 350px;
+            }
+
+            .chart2 ul li {
+                padding-bottom: 10px;
+
+            }
+
+            .col1 {
+                height: 40px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col2 {
+                height: 80px;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col3 {
+                height: 220px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col4 {
+                height: 160px;
+                width: 20px;
+                left: 120px;
+            }
+
+            .col6 {
+                height: 70px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col7 {
+                height: 170;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col8 {
+                height: 150px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col9 {
+                height: 110;
+                width: 20px;
+                left: 120px;
+            }
+
+            .icon {
+                margin-left: 200px;
+                margin-top: 20px;
+            }
+
+            .icon span {
+                padding-left: 30px;
+                font-size: 18px;
+                display: inline-block;
+
+
+            }
+
+
+        }
+
+        @media only screen and (min-width:520px) and (max-width:768px) {
+            .menu {
+                height: 30px;
+                width: 100%;
+            }
+
+            .leftmenu {
+                width: 5%;
+                line-height: 30px;
+
+            }
+
+            .leftmenu h4 {
+                padding-left: 10px;
+                font-size: 14px;
+            }
+
+            .rightmenu {
+                width: 95%;
+                left: 10%;
+
+                float: right;
+            }
+
+            .rightmenu ul {
+                margin-left: 150px;
+
+            }
+
+            .rightmenu ul li {
+                padding-left: 10px;
+                line-height: 30px;
+                font-size: 10px;
+
+            }
+
+            .main h1 {
+                position: absolute;
+                left: 60px;
+                font-size: 30px;
+            }
+
+            .main p {
+                font-size: 12px;
+                position: absolute;
+                top: 40px;
+                left: 25px;
+            }
+
+            #mail {
+
+                margin-left: 20%;
+                margin-top: 130px;
+                padding: 10px 30px;
+                font-size: 16px;
+            }
+
+            .msection {
+
+                height: 450px;
+                width: 100%;
+                position: relative;
+            }
+            .left{
+                height: 450px;
+            }
+
+            .colum {
+                position: relative;
+                height: 100px;
+            }
+
+            .colum1 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 100px;
+            }
+
+            .colum2 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 250px;
+            }
+
+            .colum3 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 400px;
+            }
+
+            .section {
+                height: auto;
+                width: 90%;
+                position: absolute;
+                left: 10%;
+            }
+
+            .chart1 {
+                height: 250px;
+                width: 160px;
+                position: absolute;
+                top: 100px;
+                left: 50px;
+            }
+
+            .chart1 ul li {
+                padding-bottom: 40px;
+            }
+
+
+            .chart2 {
+                height: 250px;
+                width: 200px;
+                position: absolute;
+                top: 100px;
+                left: 260px;
+            }
+
+            .chart2 ul li {
+                padding-bottom: 10px;
+
+            }
+
+            .col1 {
+                height: 40px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col2 {
+                height: 80px;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col3 {
+                height: 220px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col4 {
+                height: 160px;
+                width: 20px;
+                left: 120px;
+            }
+
+            .col6 {
+                height: 70px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col7 {
+                height: 170;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col8 {
+                height: 150px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col9 {
+                height: 110;
+                width: 20px;
+                left: 120px;
+            }
+            .footer p {
+            font-size: 16px;
+            margin-top: 30px;
+        }
+
+            .icon {
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+
+            .icon span {
+                padding-left: 30px;
+                font-size: 16px;
+                display: inline-block;
+
+
+
+            }
+        }
+        @media only screen and (min-width:400px) and (max-width:520px){
+            .menu {
+            height: 150px;
+            width: 100%;
+            display: none;
+
+            
+    
+        }
+
+        .leftmenu {
+            height: 30px;
+            width: 100%;
+            float: left;
+            line-height: 0;
+            background-color: rgb(204, 142, 60);
+        }
+
+        .leftmenu h4 {
+            padding-left:0px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .rightmenu {
+            height: 120px;
+            width: 100%;
+            position: relative;
+            
+            
+            
+            
+        }
+        #checkbtn{
+            position: absolute;
+            top: -30px;
+            right: 0px;
+            color: #fff;
+            font-size: 20px;
+            display: block;
+                       
+        }
+        #check{
+            display:none;
+        }
+        #check:checked ~ ul{
+        top: 0;
+        }
+
+
+
+    
+        .rightmenu ul{
+            position:fixed;
+            top: -120px;
+            
+            
+            
+        }
+        .rightmenu ul li {
+            
+            display: block;
+            font-size: 12px;
+            padding-left: 0px;
+            line-height: 20px;
+            font-size: 12px;
+            padding-left: 100px;
+        
+        }
+
+        
+            .main h1 {
+                position: absolute;
+                left: 120px;
+                font-size: 15px;
+                top: 0px;
+                display: none;
+            }
+
+            .main p {
+                font-size: 12px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                display: none;
+            }
+
+            #mail {
+                width: 100%;
+                margin-left: 0%;
+                margin-top: 150px;
+                padding: 10px 30px;
+                font-size: 22px;
+            }
+            #try {
+            padding: 10px 40px;
+            font-size: 22px;
+            width: 100%;
+            margin-top: -40px;
+        }
+
+            .msection {
+
+                height: 450px;
+                width: 100%;
+                position: relative;
+            }
+            .left{
+                height: 450px;
+            }
+
+            .colum {
+                position: relative;
+                height: 100px;
+            }
+
+            .colum1 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 60px;
+            }
+
+            .colum2 {
+                position: absolute;
+                height:100px;
+                width: 100px;
+                left: 180px;
+            }
+
+            .colum3 {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                left: 300px;
+            }
+
+            .section {
+                height: auto;
+                width: 90%;
+                position: absolute;
+                left: 10%;
+            }
+
+            .chart1 {
+                height: 210px;
+                width: 130px;
+                position: absolute;
+                top: 100px;
+                left: 30px;
+            }
+
+            .chart1 ul li {
+                padding-bottom: 0px;
+                margin-top: 25px;
+                font-size: 12px;
+            }
+
+
+            .chart2 {
+                height: 210px;
+                width: 130px;
+                position: absolute;
+                top: 100px;
+                left: 210px;
+            }
+
+            .chart2 ul li {
+                padding-bottom: 0px;
+                margin-left: -20px;
+                margin-bottom: 10px;
+                font-size: 12px;
+
+            }
+
+            .col1 {
+                height: 30px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col2 {
+                height: 80px;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col3 {
+                height: 160px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col4 {
+                height: 110px;
+                width: 20px;
+                left: 120px;
+            }
+
+            .col6 {
+                height: 50px;
+                width: 20px;
+                left: 20px;
+            }
+
+            .col7 {
+                height: 200px;
+                width: 20px;
+                left: 50px;
+            }
+
+            .col8 {
+                height: 120px;
+                width: 20px;
+                left: 80px;
+            }
+
+            .col9 {
+                height: 70;
+                width: 20px;
+                left: 120px;
+            }
+            .footer p {
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+            .icon {
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+
+            .icon span {
+                padding-left: 15px;
+                font-size: 12px;
+                display: inline-block;
+
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            
+            <div class="leftmenu">
+                <h4>rathodtechnical</h4>
+            </div>
+            <div class="rightmenu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">Works</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+                <input type="checkbox" name="check" value="" id="check">
+            <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Manage the team wants to be on</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, voluptatum deleniti? Autem, quia ut
+                necessitatibus porro distinctio repellat debitis quod aut esse, reprehenderit laborum? Corporis, saepe
+                quia. Fugiat, numquam atque.</p>
+            <button id="mail">rathod@technical.com</button>
+            <button id="try">Try it free</button>
+
+        </div>
+        <div class="msection">
+            <div class="left">
+                <div class="colum">
+                    <div class="colum1">987.654<br><br>
+                        <p>dhierelk jdek</p>
+                    </div>
+                    <div class="colum2">789<br><br>
+                        <p>dhierelk jdek</p>
+                    </div>
+                    <div class="colum3">321<br><br>
+                        <p>dhierelk jdek</p>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="chart1">
+                        <ul>
+                            <li>500</li>
+                            <li>400</li>
+                            <li>300</li>
+                            <li>200</li>
+                            <li>100</li>
+                        </ul>
+                        <div class="col1"></div>
+                        <div class="col2"></div>
+                        <div class="col3"></div>
+                        <div class="col4"></div>
+
+                    </div>
+                    <div class="chart2">
+                        <ul>
+
+                            <li>80</li>
+                            <li>70</li>
+                            <li>60</li>
+                            <li>50</li>
+                            <li>40</li>
+                            <li>30</li>
+                            <li>20</li>
+                            <li>10</li>
+                        </ul>
+                        <div class="col6"></div>
+                        <div class="col7"></div>
+                        <div class="col8"></div>
+                        <div class="col9"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>trusted by over 10,000+ world's best teams </p>
+            <div class="icon">
+                <span>google</span><span>airbnb</span><span>facebook</span><span>HubSpot</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

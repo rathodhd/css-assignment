@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery usig grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <Style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        .container{
+            height: 600px;
+            width: 90%;
+            background-color:#000 ;
+            margin: auto;
+            margin-top: 25px;
+            
+            /* margin-top: 50px;
+            margin-left: 275px; */
+            /* justify-content: center;
+            text-align: center;
+            align-content: center; */
+            
+            
+            }
+        .row img
+        {
+            height: 150px;
+            width: 100%;
+            background-size: cover;
+            padding: 0 10px 10px 0px;
+
+        }
+        .menu{
+            height: auto;
+            width: 10%;
+            float: right;
+            color: white;
+        }
+        .menu ul li{
+            text-align: right;
+        }
+        .menu ul li a{
+
+            text-decoration: none;
+            color: #fff;
+            font-size: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        .menu ul li a:hover{
+            color: orange;
+            text-decoration: underline;
+        }
+        .menu h6{
+            text-align: right;
+            padding-top: 25px;
+            padding-right: 20px;
+            font-size: 16px;
+        }
+        .menu .icon{
+            display: flex;
+            float: right;
+            padding: 20px 20px;
+        }
+        .menu .icon i{
+            padding-left: 10px;
+            font-size: 10px;       
+        }
+        
+        .row1{
+            height: 150px;
+            width: 90%;
+            color: white;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 150px;
+            /* grid-column-start: 1;
+            grid-column-end: 2; */
+            }
+        
+        
+        .row2{
+            height: 150px;
+            width: 90%;
+            color: white;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 150px;  
+  
+        }
+        
+        .row3{
+            height: 150px;
+            width: 90%;
+            color: white;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 150px;
+            
+        }
+
+        .row4{
+            
+            height: 150px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 150px;
+            
+            }
+        
+    </Style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h6>SHUTTER</h6>
+            <br>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">PHOTOS</a></li>
+                <li><a href="">BO</a></li>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+            <div class="icon">
+            <div class="facebook">
+                <i class="fa fa-facebook"></i>
+            </div>
+            <div class="twitter">
+                <i class="fa fa-twitter"></i>
+            </div>
+            <div class="instagram">
+                <i class="fa fa-instagram"></i>
+            </div>
+        </div>
+        </div>
+        <div class="row row1">
+            <div class="col col1"><img src="/1.jfif"></div>
+            <div class="col col2"><img src="/3.jfif"></div>
+            
+            
+        </div>
+        <div class="row row2">
+            <div class="col col3"><img src="/4.jfif"></div>
+            <div class="col col4"><img src="/5.jfif"></div>
+            <div class="col col5"><img src="/6.jfif"></div>
+
+        </div>
+        <div class="row row3">
+            <div class="col col6"><img src="/7.jfif"></div>
+            <div class="col col7"><img src="/9.jfif"></div>
+        </div>
+        <div class="row row4">
+            <div class="col col8"><img src="/10.jfif"></div>
+            <div class="col col9"><img src="/11.jfif"></div>
+            <div class="col col10"><img src="/1.jfif"></div>
+
+
+        </div>
+        
+        
+    </div>
+    
+    
+</body>
+</html>
